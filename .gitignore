@@ -1,0 +1,5 @@
+bazel-*
+catch.hpp
+config.log
+.scon*
+*.o
