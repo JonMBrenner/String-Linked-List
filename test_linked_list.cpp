@@ -102,7 +102,6 @@ TEST_CASE("copy constructor") {
   REQUIRE(copy[0] == "one");
 }
 
-#if 0
 TEST_CASE("copy assignment") {
   jmb::LinkedList original;
   original.append_back("dos");
@@ -120,6 +119,7 @@ TEST_CASE("copy assignment") {
   REQUIRE(copy[2] == "tres");
 }
 
+#if 0
 TEST_CASE("remove front") {
   jmb::LinkedList list;
   list.append_front("three");

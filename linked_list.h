@@ -9,6 +9,7 @@ class LinkedList {
   public:
     LinkedList() = default;
     LinkedList(const LinkedList& other);
+    LinkedList& operator=(const LinkedList& other);
     ~LinkedList();
 
     bool empty() const;
