@@ -8,6 +8,7 @@ namespace jmb {
 class LinkedList {
   public:
     LinkedList() = default;
+    LinkedList(const LinkedList& other);
     ~LinkedList();
 
     bool empty() const;

@@ -81,7 +81,6 @@ TEST_CASE("const correctness on size and empty") {
   list.size();
 }
 
-#if 0
 TEST_CASE("copy constructor") {
   jmb::LinkedList original;
   original.append_back("two");
@@ -103,6 +102,7 @@ TEST_CASE("copy constructor") {
   REQUIRE(copy[0] == "one");
 }
 
+#if 0
 TEST_CASE("copy assignment") {
   jmb::LinkedList original;
   original.append_back("dos");
