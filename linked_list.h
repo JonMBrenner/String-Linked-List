@@ -8,8 +8,13 @@ namespace jmb {
 class LinkedList {
   public:
     LinkedList() = default;
+    ~LinkedList();
+
     bool empty() const;
     int size() const;
+    void append_front(std::string data);
+    std::string& operator[](std::size_t index);
+    const std::string& operator[](std::size_t index) const;
 
   private:
     struct Node {

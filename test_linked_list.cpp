@@ -11,7 +11,6 @@ TEST_CASE("create and destroy") {
   REQUIRE(list.size() == 0);
 }
 
-#if 0
 TEST_CASE("insert one at front") {
   jmb::LinkedList list;
   list.append_front("hello");
@@ -20,6 +19,7 @@ TEST_CASE("insert one at front") {
   REQUIRE(list[0] == "hello");
 }
 
+#if 0
 TEST_CASE("insert one at back") {
   jmb::LinkedList list;
   list.append_back("hello");
