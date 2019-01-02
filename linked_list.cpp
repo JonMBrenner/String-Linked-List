@@ -23,6 +23,20 @@ void jmb::LinkedList::append_front(std::string data) {
   ++size_;
 }
 
+void jmb::LinkedList::append_back(std::string data) {
+  if (this->empty()) {
+    head_ = new Node {data, nullptr};
+  } else {
+    Node* cur = head_;
+    for (std::size_t i = 0; i < size_ - 1; ++i) {
+      cur = cur->next_;
+    }
+    cur->next_ = new Node {data, nullptr};
+  }
+  ++size_;
+}
+
+
 std::string& jmb::LinkedList::operator[](std::size_t index) {
   //TODO: raise error for out of bound index
   Node* cur = head_;

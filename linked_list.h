@@ -13,6 +13,7 @@ class LinkedList {
     bool empty() const;
     int size() const;
     void append_front(std::string data);
+    void append_back(std::string data);
     std::string& operator[](std::size_t index);
     const std::string& operator[](std::size_t index) const;
 

@@ -19,7 +19,6 @@ TEST_CASE("insert one at front") {
   REQUIRE(list[0] == "hello");
 }
 
-#if 0
 TEST_CASE("insert one at back") {
   jmb::LinkedList list;
   list.append_back("hello");
@@ -82,6 +81,7 @@ TEST_CASE("const correctness on size and empty") {
   list.size();
 }
 
+#if 0
 TEST_CASE("copy constructor") {
   jmb::LinkedList original;
   original.append_back("two");
