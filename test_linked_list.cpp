@@ -185,7 +185,6 @@ TEST_CASE("remove all elements") {
   REQUIRE(list.empty());
 }
 
-#if 0
 TEST_CASE("equality") {
   jmb::LinkedList list1;
 
@@ -218,6 +217,7 @@ TEST_CASE("equality") {
   REQUIRE(list1 != list2);
 }
 
+#if 0
 TEST_CASE("out of range exceptions") {
   jmb::LinkedList list;
   list.append_back("one");

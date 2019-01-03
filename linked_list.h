@@ -19,6 +19,8 @@ class LinkedList {
     void remove(std::size_t index);
     std::string& operator[](std::size_t index);
     const std::string& operator[](std::size_t index) const;
+    bool operator==(const LinkedList& other) const;
+    bool operator!=(const LinkedList& other) const;
 
   private:
     struct Node {

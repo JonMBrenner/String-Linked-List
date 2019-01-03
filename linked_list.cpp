@@ -82,8 +82,6 @@ void jmb::LinkedList::remove(std::size_t index) {
   --size_;
 }
 
-
-
 std::string& jmb::LinkedList::operator[](std::size_t index) {
   //TODO: raise error for out of bound index
   Node* cur = head_;
@@ -100,4 +98,24 @@ const std::string& jmb::LinkedList::operator[](std::size_t index) const {
     cur = cur->next_;
   }
   return cur->data_;
+}
+
+bool jmb::LinkedList::operator==(const LinkedList& other) const {
+  if (size_ != other.size_) {
+    return false;
+  }
+  Node* cur = head_;
+  Node* cur_other = other.head_;
+  for (std::size_t i = 0; i < size_; ++i) {
+    if (cur->data_ != cur_other->data_) {
+      return false;
+    }
+    cur = cur->next_;
+    cur_other = cur_other->next_;
+  }
+  return true;
+}
+
+bool jmb::LinkedList::operator!=(const LinkedList& other) const {
+  return !(*this == other);
 }
