@@ -217,7 +217,6 @@ TEST_CASE("equality") {
   REQUIRE(list1 != list2);
 }
 
-#if 0
 TEST_CASE("out of range exceptions") {
   jmb::LinkedList list;
   list.append_back("one");
@@ -231,4 +230,3 @@ TEST_CASE("out of range exceptions") {
   REQUIRE_THROWS_AS(std::as_const(list)[0], std::out_of_range);
   REQUIRE_THROWS_AS(list.remove(0), std::out_of_range);
 }
-#endif

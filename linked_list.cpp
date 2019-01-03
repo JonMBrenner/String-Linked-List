@@ -1,4 +1,5 @@
 #include "linked_list.h"
+#include <stdexcept>
 
 jmb::LinkedList::LinkedList(const LinkedList& other)
   : head_{new Node{other.head_->data_,other.head_->next_}}, size_{other.size_} {
@@ -65,7 +66,9 @@ void jmb::LinkedList::append_back(std::string data) {
 }
 
 void jmb::LinkedList::remove(std::size_t index) {
-  //TODO: raise error for out of bound index
+  if (this->empty() || index > size_-1) {
+    throw std::out_of_range("index out of range");
+  }
   Node* remove;
   if (index == 0) {
     remove = head_;
@@ -83,7 +86,9 @@ void jmb::LinkedList::remove(std::size_t index) {
 }
 
 std::string& jmb::LinkedList::operator[](std::size_t index) {
-  //TODO: raise error for out of bound index
+  if (this->empty() || index > size_-1) {
+    throw std::out_of_range("index out of range");
+  }
   Node* cur = head_;
   for (std::size_t i = 0; i < index; ++i) {
     cur = cur->next_;
@@ -92,7 +97,9 @@ std::string& jmb::LinkedList::operator[](std::size_t index) {
 }
 
 const std::string& jmb::LinkedList::operator[](std::size_t index) const {
-  //TODO: raise error for out of bound index
+  if (this->empty() || index > size_-1) {
+    throw std::out_of_range("index out of range");
+  }
   Node* cur = head_;
   for (std::size_t i = 0; i < index; ++i) {
     cur = cur->next_;
