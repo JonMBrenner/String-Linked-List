@@ -119,7 +119,6 @@ TEST_CASE("copy assignment") {
   REQUIRE(copy[2] == "tres");
 }
 
-#if 0
 TEST_CASE("remove front") {
   jmb::LinkedList list;
   list.append_front("three");
@@ -186,6 +185,7 @@ TEST_CASE("remove all elements") {
   REQUIRE(list.empty());
 }
 
+#if 0
 TEST_CASE("equality") {
   jmb::LinkedList list1;
 

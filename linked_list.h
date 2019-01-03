@@ -16,6 +16,7 @@ class LinkedList {
     int size() const;
     void append_front(std::string data);
     void append_back(std::string data);
+    void remove(std::size_t index);
     std::string& operator[](std::size_t index);
     const std::string& operator[](std::size_t index) const;
 

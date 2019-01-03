@@ -64,6 +64,25 @@ void jmb::LinkedList::append_back(std::string data) {
   ++size_;
 }
 
+void jmb::LinkedList::remove(std::size_t index) {
+  //TODO: raise error for out of bound index
+  Node* remove;
+  if (index == 0) {
+    remove = head_;
+    head_ = head_->next_;
+  } else {
+    Node* cur = head_;
+    for (std::size_t i = 0; i < index-1; ++i) {
+      cur = cur->next_;
+    }
+    remove = cur->next_;
+    cur->next_ = cur->next_->next_;
+  }
+  delete remove;
+  --size_;
+}
+
+
 
 std::string& jmb::LinkedList::operator[](std::size_t index) {
   //TODO: raise error for out of bound index
