@@ -57,7 +57,7 @@ void jmb::LinkedList::append_back(std::string data) {
     head_ = new Node{data, nullptr};
   } else {
     Node* cur = head_;
-    for (std::size_t i = 0; i < size_ - 1; ++i) {
+    for (std::size_t i = 0; i < size_-1; ++i) {
       cur = cur->next_;
     }
     cur->next_ = new Node{data, nullptr};
